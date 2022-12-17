@@ -1,3 +1,4 @@
+
 from models import Player, Enemy
 from exceptions import EnemyDown, GameOver
 
@@ -12,9 +13,6 @@ def get_player_name():
     return player_name
 
 
-
-
-
 def play():
     player_name = get_player_name()
     player = Player(player_name)
@@ -27,7 +25,7 @@ def play():
             player.defence(enemy)
         except EnemyDown as qwe:
             print(qwe)
-            print(f'Enemy {enemy.level} is dead')
+            print(f'Enemy {enemy.level - 1} is dead')
             print(f'Player score = {player.score}')
 
         except GameOver as qwe:
@@ -35,6 +33,9 @@ def play():
             print(f'{player_name} is dead')
             print(f'Score is {player.score}')
             flag = False
+
+        finally:
+            print('Слава Україні!!')
 
 
 if __name__ == "__main__":
