@@ -82,7 +82,7 @@ class Player:
             try:
                 enemy.decrease_health()
                 self.score += 1
-                print(f"'Your attack is successful! +1 point {self.score = }")
+                print(f"'Your attack is successful! +1 point.  Your score = {self.score}")
             except EnemyDown:
                 self.score += 2
                 raise
