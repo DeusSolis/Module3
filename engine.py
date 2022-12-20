@@ -1,4 +1,4 @@
-
+import sys
 from models import Player, Enemy
 from exceptions import EnemyDown, GameOver
 
@@ -33,6 +33,9 @@ def play():
             print(f'{player_name} is dead')
             print(f'Score is {player.score}')
             flag = False
+        except KeyboardInterrupt:
+            print("Good game")
+            sys.exit()
 
         finally:
             print('Слава Україні!!')
